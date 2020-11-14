@@ -1,19 +1,25 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+#app
+  PxNavigation
+  router-view
 </template>
+<script>
+// @ is an alias to /src
+import PxNavigation from "@/components/PxNavigation.vue";
+
+export default {
+  //name: "Home",
+  components: {
+    PxNavigation,
+  },
+};
+</script>
 
 <style lang="stylus">
 #app
   font-family Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  text-align center
   color #2c3e50
   margin-top 60px
 </style>
